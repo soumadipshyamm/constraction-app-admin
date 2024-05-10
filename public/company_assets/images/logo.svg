@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="49.5" height="55.65" viewBox="0 0 49.5 55.65">
+  <g id="Layer_1" data-name="Layer 1" transform="translate(-0.25 -0.308)">
+    <g id="Group_6874" data-name="Group 6874" transform="translate(0.5 0.62)">
+      <path id="Path_2449" data-name="Path 2449" d="M35.395,18.25,12.5,35V68.367H24.785v-29.6H45.446V68.646h13.4V34.863Z" transform="translate(-10.825 -15.789)" fill="#c3ff4b" stroke="#121212" stroke-width="1"/>
+      <rect id="Rectangle_244" data-name="Rectangle 244" width="2.833" height="31.162" transform="matrix(0.59, 0.807, -0.807, 0.59, 25.669, 3.015)"/>
+      <rect id="Rectangle_245" data-name="Rectangle 245" width="2.833" height="33.074" transform="translate(2.516 18.667)"/>
+      <rect id="Rectangle_246" data-name="Rectangle 246" width="2.416" height="27" rx="1.208" transform="translate(34.621 25.44)"/>
+      <path id="Path_2450" data-name="Path 2450" d="M25,.62.5,18.89V55.432H15.3v-30.2H34.563v30.2H49.5V18.89ZM46.15,52.159H36.238V24.326A2.326,2.326,0,0,0,33.912,22H15.948a2.326,2.326,0,0,0-2.326,2.326V52.159H3.85V20.749L25,5.463,46.15,20.749Z" transform="translate(-0.5 -0.62)" fill="#fff" stroke="#050606" stroke-width="0.5"/>
+      <rect id="Rectangle_247" data-name="Rectangle 247" width="7.538" height="2.028" rx="0.5" transform="translate(20.731 52.81)" fill="#fff" stroke="#121212" stroke-width="1"/>
+      <text id="KONCITE" transform="translate(16 36.315)" fill="#fff" font-size="4" font-family="ITC Avant Garde Gothic" font-weight="700"><tspan x="0" y="0" letter-spacing="-0.03em">K</tspan><tspan y="0" fill="#c4d940">O</tspan><tspan y="0">NCITE</tspan></text>
+      <g id="Group_6873" data-name="Group 6873" transform="translate(18.288 22.613)">
+        <rect id="Rectangle_248" data-name="Rectangle 248" width="8.376" height="0.558" rx="0.279" transform="translate(1.954 0.07)"/>
+        <circle id="Ellipse_26" data-name="Ellipse 26" cx="0.349" cy="0.349" r="0.349"/>
+        <circle id="Ellipse_27" data-name="Ellipse 27" cx="0.349" cy="0.349" r="0.349" transform="translate(11.587)"/>
+      </g>
+    </g>
+  </g>
+</svg>

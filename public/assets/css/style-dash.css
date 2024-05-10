@@ -1,0 +1,250 @@
+/* scrollbar changes */
+body {
+      scrollbar-color: #C3FF4B;
+      scrollbar-width: 8px;
+}
+
+::-webkit-scrollbar {
+      width: 8px;
+      transform: translate(5px, 5px);
+      padding-right: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+      background-color: #05050559;
+      border-radius: 2px;
+}
+
+::-webkit-scrollbar-track:hover {
+      border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: #C3FF4B;
+      border-radius: 2px;
+      height: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+      background-color: #000000;
+}
+
+/* text selection color */
+::-moz-selection {
+      /* Code for Firefox */
+      color: rgb(17, 17, 17);
+      background: #C3FF4B;
+}
+
+::selection {
+      color: rgb(17, 17, 17);
+      background: #C3FF4B;
+}
+
+
+/* button design */
+.ads-btn {
+      background: #C3FF4B;
+      padding: 7px 20px;
+      border-radius: 5px;
+      color: #000;
+}
+
+.subs-btn {
+      background: #DA3A2F;
+      padding: 6px 20px;
+      border-radius: 5px;
+      color: #fff;
+}
+
+/*======================================
+    Dashboard design
+========================================*/
+/* sidebar fixing */
+.closed-sidebar .app-header__logo {
+      width: 100px;
+      padding: 0 10px;
+}
+
+.closed-sidebar .app-header__logo .logo-src {
+      width: 40px;
+}
+
+.closed-sidebar .header__pane.ml-auto {
+      margin-left: 0 !important;
+}
+
+
+.closed-sidebar .hamburger-inner,
+.closed-sidebar .hamburger-inner::before,
+.closed-sidebar .hamburger-inner::after {
+      width: 18px;
+}
+
+.closed-sidebar .hamburger--elastic .hamburger-inner::after {
+      top: 12px;
+}
+
+.closed-sidebar .app-sidebar .app-sidebar__inner ul li a {
+      text-indent: 0.51rem;
+      font-size: 0;
+}
+
+.closed-sidebar .app-sidebar .app-sidebar__inner ul li a span {
+      font-size: 20px;
+}
+
+.closed-sidebar h6.widget-heading {
+      text-indent: 0;
+      font-size: 0;
+}
+
+.closed-sidebar .widget_profile .prol_img {
+      gap: 0;
+}
+
+/* .fixed-sidebar .app-sidebar{
+      position: sticky;
+}
+
+.fixed-sidebar .app-main .app-main__outer{
+      padding-left: 10px;
+} */
+
+.app-sidebar__inner ul {
+      height: 320px;
+      overflow-y: scroll;
+}
+
+.app-sidebar .scrollbar-sidebar {
+      overflow-y: hidden;
+}
+
+/* topbar */
+.nav_top {
+      background: #C3FF4B;
+}
+
+section.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 9;
+}
+
+.top-bar ul.nav_links {
+      display: flex;
+      padding: 10px;
+      gap: 35px;
+}
+
+.top-bar ul li a {
+      color: #000;
+      font-size: 15px;
+      font-family: 'Open Sans', sans-serif;
+}
+
+.logo-sec {
+      background: #000;
+      padding: 20px 35px;
+}
+
+.logo-sec .logos_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.logo-sec .logos_box .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+}
+
+.logo-sec .profile_box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.prol_img img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #fff;
+}
+
+.widget_profile .prol_img {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.logo-box .btn_company {
+      background: #fff;
+      min-width: 230px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.trial-box {
+      background: #DADADA;
+      padding: 10px 50px;
+}
+
+.trail_con {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+}
+
+.app_footer {
+      background: #000;
+      position: sticky;
+      bottom: 0;
+      z-index: 9;
+}
+
+.widget-content-notification {
+      position: relative;
+}
+
+.widget-content-notification img {
+      height: 35px;
+  }
+
+.widget-content-notification span.noti_no {
+      position: absolute;
+      color: #000;
+      top: 0;
+      font-size: 11px;
+      left: 23px;
+}
+/* 
+.widget-content-notification span.noti_no::before {
+      position: absolute;
+      content: '';
+      background: #ffffff;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      left: -5px;
+  } */
+/*======================================
+    Master Company design
+========================================*/
+.company_box {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(2, 48%);
+      place-content: center;
+}
+
+.comp-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}

@@ -1,0 +1,557 @@
+/* large desktop :1400px. */
+@media (min-width: 1400px) and (max-width: 2000px) {}
+
+
+/* desktop 1200px to 1600px */
+@media (min-width: 1200px) and (max-width: 1600px) {}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* .mobile-2 img {
+        bottom: -67px;
+        right: 83px;
+    }
+    .mobile1 img {
+        bottom: -19px;
+    }
+    .mobile1 img, .mobile-2 img {
+        max-width: 220px;
+    } */
+    .banner-content h1 {
+        font-size: 37px;
+        margin: 20px auto;
+        max-width: 708px;
+    }
+
+    .banner-content p {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .common img {
+        width: 47vw;
+        margin-left: 20px;
+    }
+
+    .banner-btn li a {
+
+        font-size: 18px;
+        height: 48px;
+    }
+
+    ul.banner-btn {
+
+        max-width: 700px;
+        margin: 31px auto;
+    }
+
+    /* login */
+    .log-in-content p {
+        padding: 24px 0;
+        font: normal normal normal 19px/36px Montserrat;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .log-in-content button.btn.btn-primary {
+        margin: 13px 0;
+    }
+
+    .log-in .btn.btn-primary {
+        font: normal normal 600 18px/19px Open Sans;
+        padding: 13px;
+    }
+
+    .log-in h5 {
+        font: normal normal 400 17px/19px Open Sans;
+    }
+
+    /* sign-up */
+
+    .f-input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .btn--browse {
+        height: 30px;
+        top: -37px;
+        width: 116px;
+        font: normal normal 600 16px/17px Open Sans;
+    }
+}
+
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .mobile1 img,
+    .mobile-2 img {
+        max-width: 148px;
+    }
+
+    .mobile1 img {
+        bottom: -27px;
+        left: 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .banner-content p {
+        text-align: center;
+        margin: auto;
+    }
+
+    ul.banner-btn {
+        align-items: center;
+        gap: 35px;
+        max-width: 515px;
+        margin: 20px auto;
+    }
+
+    .sec-card p {
+
+        font-size: 14px;
+
+    }
+
+    .common_sec_contnt_about p {
+        line-height: 20px;
+    }
+
+    /* about-section */
+    .inner-banner-content h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .inner-banner-content p {
+        text-align: center;
+        margin: auto;
+    }
+
+    .inner-banner-content h1 {
+        font-size: 35px;
+
+    }
+
+    .inner-banner-content p {
+        font-size: 17px;
+        margin: 10px auto;
+    }
+
+    ul.inner-banner-btn a {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    /* log-in */
+    .log-in {
+        padding: 48px 0 29px 0;
+    }
+
+    .log-in-content p {
+        padding: 20px 0;
+        font: normal normal normal 16px/26px Montserrat;
+    }
+
+    .form-control {
+        padding: 9px;
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+
+    .lapto-image img {
+        width: 56vw;
+
+    }
+
+    .log-in-content button.btn.btn-primary {
+        margin: unset;
+
+    }
+
+    .log-in .btn.btn-primary {
+        font: normal normal 600 18px/19px Open Sans;
+        padding: 11px;
+    }
+
+    .log-in h5 {
+        font: normal normal 400 14px/19px Open Sans;
+    }
+
+    /* sign-up */
+    .btn--browse {
+        height: 32px;
+        top: -48px;
+        width: 117px;
+    }
+
+    .sign-up .btn.btn-primary {
+        padding: 9px;
+        margin-top: 16px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    .about-counter-card {
+        margin-bottom: 30px;
+    }
+
+    .mobile1 img,
+    .mobile-2 img {
+        max-width: 188px;
+    }
+
+    .mobile-2 img {
+        bottom: -65px;
+        right: 2px;
+    }
+
+    .mobile1 img {
+        bottom: -28px;
+    }
+}
+
+
+
+/* Tablet desktop :320px. */
+@media (min-width: 320px) and (max-width: 767px) {
+    .banner-content {
+        transform: translate(-50%, -63%);
+        padding: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .banner-content p {
+        font-size: 12px;
+        text-align: center;
+        margin: auto;
+    }
+
+    ul.banner-btn {
+        align-items: center;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 4px;
+    }
+
+    ul.banner-btn a {
+        font-size: 9px;
+        height: 24px;
+    }
+
+    .sec-card p {
+        font-size: 10px;
+    }
+
+    .sec-card h3 {
+        font-size: 29px;
+
+    }
+
+    .sec-card h3,
+    .sec-card p {
+        height: unset;
+    }
+
+    .sec-card>img {
+        left: 9px;
+        top: -31px;
+    }
+
+    .next-step ul li a {
+        width: 195px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    footer h3 {
+        margin: 15px 0px;
+    }
+
+    a.chat {
+        right: 55px;
+    }
+
+    .power-play-content a {
+        width: 255px;
+        font: normal normal 600 17px/19px Open Sans;
+    }
+
+    .counter-card span.plus_icon::before {
+        right: -30px;
+        font-size: 25px;
+        top: 6px;
+    }
+
+    .stellarnav .menu-toggle,
+    .stellarnav .call-btn-mobile,
+    .stellarnav .location-btn-mobile,
+    .stellarnav .close-menu {
+        padding: 0;
+    }
+
+    /* about-section */
+    .inner-banner-content {
+        transform: translate(-50%, -50%);
+    }
+
+    .inner-banner-content h1 {
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .inner-banner-content p {
+        font-size: 12px;
+        text-align: center;
+        margin: auto;
+    }
+
+    ul.inner-banner-btn a {
+        font-size: 11px;
+        height: 24px;
+    }
+
+    ul.inner-banner-btn {
+        margin-top: 5px;
+
+    }
+
+    .common_sec_contnt_about p {
+        line-height: 20px;
+    }
+
+    .common_sec_contnt_about {
+        padding-bottom: 35px;
+    }
+
+    .sec-card {
+        gap: 10px;
+
+    }
+
+    .counter-card h3 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .counter-card p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    a.login {
+        width: 98px;
+        height: 43px;
+        font-size: 14px;
+
+    }
+
+    .brand-logo img {
+        width: 47px;
+
+    }
+
+    .our-team h5 {
+
+        font: normal normal normal 30px/32px Bebas Neue;
+        padding: 30px 0;
+
+    }
+
+    .team-card h4 {
+        font: normal normal normal 22px/30px Bebas Neue;
+
+    }
+
+    .team-card p {
+        font: normal normal normal 16px/26px Open Sans;
+
+    }
+
+    .team-card {
+        padding: 24px 24px 24px 24px;
+        border-radius: 15px;
+
+    }
+
+    .power-play-content h5 {
+        font: normal normal normal 35px/41px Bebas Neue;
+
+    }
+
+    .power-play-content p {
+        font: normal normal normal 18px/26px Open Sans;
+        padding: 10px 0px 23px 0;
+        max-width: 300px;
+    }
+
+    section.common {
+        padding: 50px 0px;
+    }
+
+    .power-banner {
+        margin: 50px 0;
+        padding-bottom: 20px;
+        max-height: unset;
+    }
+
+    /* login-section */
+    .log-in {
+        padding-top: 55px;
+    }
+
+    .log-in .log-in-content {
+        max-width: unset;
+        padding: 0 32px;
+    }
+
+    .lapto-image img {
+        width: 94vw;
+        margin: 0px auto;
+    }
+
+    .log-in h5 {
+        margin: 39px auto;
+        font: normal normal 400 29px/19px Open Sans;
+    }
+
+    /* sign-up */
+    .sign-up-banner h1 {
+        font-size: 40px;
+    }
+
+    /* dashboard fixing */
+    .logo-sec .logos_box {
+        flex-direction: column;
+    }
+
+    .top-bar ul.nav_links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .trail_con {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .trial-box{
+        padding: 6px 20px;
+    }
+
+    .logo-box .btn_company {
+        min-width: 180px;
+
+    }
+
+    .comp-top {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .comp-topright {
+        flex-direction: column;
+    }
+
+    .tablehead_searchbox {
+        flex-direction: column;
+    }
+
+    .row_reverse{
+        flex-direction: column-reverse;
+    }
+
+}
+
+/* @media (min-width: 320px) and (max-width: 337px) {
+    .btn--browse {
+        right: -185px;
+    }
+
+} */
+@media (min-width: 320px) and (max-width: 524px) {
+
+    /* sign-up */
+    .btn--browse {
+
+        width: 97px;
+        font: normal normal 600 16px/17px Open Sans;
+
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+
+
+    footer p {
+        font-size: 16px;
+    }
+
+    .mobile1 img,
+    .mobile-2 img {
+        max-width: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto 20px auto;
+        border: unset;
+        bottom: unset;
+    }
+
+    .copyright {
+        margin-top: 50px;
+        padding: 15px 0px;
+
+    }
+
+    /* login */
+    .log-in-content p {
+        padding: 20px 0;
+        font: normal normal normal 25px/36px Montserrat;
+    }
+
+    .form-control {
+        padding: 9px;
+        font-size: 15px;
+    }
+
+    .log-in-content button.btn.btn-primary {
+        margin-top: 4px;
+    }
+
+    .log-in h5 {
+        margin: 25px auto;
+        font: normal normal 400 19px/19px Open Sans;
+    }
+
+    .log-in-content button.btn.btn-primary {
+        margin-top: 3px;
+        padding: 14px;
+        font-size: 20px;
+    }
+
+    /* sing-up */
+    .log-in-content p {
+        padding: 11px 0;
+        font: normal normal normal 19px/33px Montserrat;
+    }
+}

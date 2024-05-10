@@ -1,0 +1,564 @@
+{
+    "subjects": [
+        {
+            "name": "Assamese",
+            "short_name": "As",
+            "code" : 1,
+            "language_type": "First Language",
+            "local_language" : "অসমীয়া",
+            "is_active" : true
+        },
+        {
+            "name": "Bengali (FL)",
+            "short_name": "B",
+            "code" : 2,
+            "language_type": "First Language",
+            "local_language": "বাংলা (প্রথম ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "English (FL)",
+            "short_name": "E",
+            "code" : 3,
+            "language_type": "First Language",
+            "local_language": "ইংরেজি",
+            "is_active" : true
+        },
+        {
+            "name": "Gujarati",
+            "short_name": "Guj",
+            "code" : 4,
+            "language_type": "First Language",
+            "local_language": "গুজরাটি",
+            "is_active" : true
+        },
+        {
+            "name": "Hindi (FL)",
+            "short_name": "Hin",
+            "code" : 5,
+            "language_type": "First Language",
+            "local_language": "হিন্দি (প্রথম ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "Malayalam",
+            "short_name": "Mal",
+            "code" : 6,
+            "language_type": "First Language",
+            "local_language": "মালায়লাম",
+            "is_active" : true
+        },
+        {
+            "name": "Marathi",
+            "short_name": "Mar",
+            "code" : 7,
+            "language_type": "First Language",
+            "local_language": "মারাঠি",
+            "is_active" : true
+        },
+        {
+            "name": "Lushai",
+            "short_name": "Lu",
+            "code" : 8,
+            "language_type": "First Language",
+            "local_language": "লুশাই",
+            "is_active" : true
+        },
+        {
+            "name": "Modern Tibetan",
+            "short_name": "Tbm",
+            "code" : 9,
+            "language_type": "First Language",
+            "local_language": "আধুনিক তিব্বতি",
+            "is_active" : true
+        },
+        {
+            "name": "Nepali (FL)",
+            "short_name": "N",
+            "code" : 10,
+            "language_type": "First Language",
+            "local_language": "নেপালি (প্রথম ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "Oriya",
+            "short_name": "Oy",
+            "code" : 11,
+            "language_type": "First Language",
+            "local_language": "ওড়িয়া",
+            "is_active" : true
+        },
+        {
+            "name": "Gurmukhi",
+            "short_name": "Gur",
+            "code" : 12,
+            "language_type": "First Language",
+            "local_language": "গুরুমুখী",
+            "is_active" : true
+        },
+        {
+            "name": "Santali",
+            "short_name": "San",
+            "code" : 13,
+            "language_type": "First Language",
+            "local_language": "সাঁওতালি",
+            "is_active" : true
+        },
+        {
+            "name": "Sadani",
+            "short_name": "Sad",
+            "code" : 14,
+            "language_type": "First Language",
+            "local_language": "সাদানী",
+            "is_active" : true
+        },
+        {
+            "name": "Telugu",
+            "short_name": "Tel",
+            "code" : 15,
+            "language_type": "First Language",
+            "local_language": "তেলেগু",
+            "is_active" : true
+        },
+        {
+            "name": "Tamil",
+            "short_name": "Tam",
+            "code" : 16,
+            "language_type": "First Language",
+            "local_language": "তামিল",
+            "is_active" : true
+        },
+        {
+            "name": "Urdu (FL)",
+            "short_name": "U",
+            "code" : 17,
+            "language_type": "First Language",
+            "local_language": "উর্দু (প্রথম ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "English (SL)",
+            "short_name": "E",
+            "code" : 21,
+            "language_type": "Second Language",
+            "local_language": "ইংরেজি (দ্বিতীয় ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "Bengali (SL)",
+            "short_name": "B",
+            "code" : 22,
+            "language_type": "Second Language",
+            "local_language": "বাংলা (দ্বিতীয় ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "Nepali",
+            "short_name": "N",
+            "code" : 23,
+            "language_type": "Second Language",
+            "local_language": "নেপালি",
+            "is_active" : true
+        },
+        {
+            "name": "History (Bengali Version)",
+            "short_name": "H",
+            "code" : 24,
+            "language_type": "Second Language",
+            "local_language": "ইতিহাস (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "History (Nepali Version)",
+            "short_name": "H",
+            "code" : 24,
+            "language_type": "Compulsory Subject",
+            "local_language": "ইতিহাস (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Geography(Bengali Version)",
+            "short_name": "G",
+            "code" : 25,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভূগোল (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Geography(Nepali Version)",
+            "short_name": "G",
+            "code" : 25,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভূগোল (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Mathematics(Bengali Version)",
+            "short_name": "M",
+            "code" : 26,
+            "language_type": "Compulsory Subject",
+            "local_language": "গণিত (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Mathematics(Hindi Version)",
+            "short_name": "M",
+            "code" : 26,
+            "language_type": "Compulsory Subject",
+            "local_language": "গণিত (হিন্দি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Mathematics(Nepali Version)",
+            "short_name": "M",
+            "code" : 26,
+            "language_type": "Compulsory Subject",
+            "local_language": "গণিত (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Mathematics(Urdu Version)",
+            "short_name": "M",
+            "code" : 26,
+            "language_type": "Compulsory Subject",
+            "local_language": "গণিত (উর্দু সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Physical Sc.(Bengali Version) (Regular)",
+            "short_name": "Psc.",
+            "code" : 27,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভৌত বিজ্ঞান (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Physical Sc.(Nepali Version) (Regular)",
+            "short_name": "Psc.",
+            "code" : 27,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভৌত বিজ্ঞান (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Physical Sc.(Bengali Version) (External)",
+            "short_name": "Psc.",
+            "code" : 27,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভৌত বিজ্ঞান (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Physical Sc.(Nepali Version) (External)",
+            "short_name": "Psc.",
+            "code" : 27,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভৌত বিজ্ঞান (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Life Sc.(Bengali Version)",
+            "short_name": "Lsc.",
+            "code" : 28,
+            "language_type": "Compulsory Subject",
+            "local_language": "জীবন বিজ্ঞান (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Life Sc.(Nepali Version)",
+            "short_name": "Lsc.",
+            "code" : 28,
+            "language_type": "Compulsory Subject",
+            "local_language": "জীবন বিজ্ঞান (নেপালি সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Bengali (A-level)",
+            "short_name": "B (A)",
+            "code" : 31,
+            "language_type": "Additional Subject",
+            "local_language": "বাংলা (এ লেভেল)",
+            "is_active" : true
+        },
+        {
+            "name": "English(Additional)",
+            "short_name": "Addl. e",
+            "code" : 32,
+            "language_type": "Additional Subject",
+            "local_language": "ইংরেজি",
+            "is_active" : true
+        },
+        {
+            "name": "Hindi (A-Level)",
+            "short_name": "Hin(A)",
+            "code" : 33,
+            "language_type": "Additional Subject",
+            "local_language": "হিন্দি (এ লেভেল)",
+            "is_active" : true
+        },
+        {
+            "name": "Nepali (Additional)",
+            "short_name": "N",
+            "code" : 34,
+            "language_type": "Additional Subject",
+            "local_language": "নেপালি",
+            "is_active" : true
+        },
+        {
+            "name": "Urdu (Additional)",
+            "short_name": "U",
+            "code" : 35,
+            "language_type": "Additional Subject",
+            "local_language": "উর্দু",
+            "is_active" : true
+        },
+        {
+            "name": "Bengali (B-Level)",
+            "short_name": "B(B)",
+            "code" : 36,
+            "language_type": "Additional Subject",
+            "local_language": "বাংলা (বি লেভেল)",
+            "is_active" : true
+        },
+        {
+            "name": "Sanskrit",
+            "short_name": "S",
+            "code" : 37,
+            "language_type": "Additional Subject",
+            "local_language": "সংস্কৃত",
+            "is_active" : true
+        },
+        {
+            "name": "Pali",
+            "short_name": "Pa",
+            "code" : 38,
+            "language_type": "Additional Subject",
+            "local_language": "পালি",
+            "is_active" : true
+        },
+        {
+            "name": "Persian",
+            "short_name": "P",
+            "code" : 39,
+            "language_type": "Additional Subject",
+            "local_language": "ফারসি",
+            "is_active" : true
+        },
+        {
+            "name": "Arabic",
+            "short_name": "A",
+            "code" : 40,
+            "language_type": "Additional Subject",
+            "local_language": "আরবি",
+            "is_active" : true
+        },
+        {
+            "name": "French",
+            "short_name": "Fr",
+            "code" : 44,
+            "language_type": "Additional Subject",
+            "local_language": "ফরাসি",
+            "is_active" : true
+        },
+        {
+            "name": "German",
+            "short_name": "Ger",
+            "code" : 45,
+            "language_type": "Additional Subject",
+            "local_language": "জার্মান",
+            "is_active" : true
+        },
+        {
+            "name": "Russain",
+            "short_name": "Russ",
+            "code" : 46,
+            "language_type": "Additional Subject",
+            "local_language": "রাশিয়ান",
+            "is_active" : true
+        },
+        {
+            "name": "Hindi (B-Level)",
+            "short_name": "Hin(B)",
+            "code" : 47,
+            "language_type": "Additional Subject",
+            "local_language": "হিন্দি (বি লেভেল)",
+            "is_active" : true
+        },
+        {
+            "name": "Mathematics (Additional)",
+            "short_name": "Addl.m",
+            "code" : 52,
+            "language_type": "Additional Subject",
+            "local_language": "গণিত",
+            "is_active" : true
+        },
+        {
+            "name": "Physics",
+            "short_name": "Ph.",
+            "code" : 54,
+            "language_type": "Additional Subject",
+            "local_language": "পদার্থবিদ্যা",
+            "is_active" : true
+        },
+        {
+            "name": "Chemistry",
+            "short_name": "Ch.",
+            "code" : 55,
+            "language_type": "Additional Subject",
+            "local_language": "রসায়ন",
+            "is_active" : true
+        },
+        {
+            "name": "Biology",
+            "short_name": "Bio.",
+            "code" : 56,
+            "language_type": "Additional Subject",
+            "local_language": "জীববিদ্যা",
+            "is_active" : true
+        },
+        {
+            "name": "Mechanics",
+            "short_name": "Mc",
+            "code" : 57,
+            "language_type": "Additional Subject",
+            "local_language": "বলবিদ্যা",
+            "is_active" : true
+        },
+        {
+            "name": "Geography",
+            "short_name": "Geo",
+            "code" : 58,
+            "language_type": "Additional Subject",
+            "local_language": "ভূগোল",
+            "is_active" : true
+        },
+        {
+            "name": "Logic",
+            "short_name": "Lg",
+            "code" : 60,
+            "language_type": "Additional Subject",
+            "local_language": "যুক্তিবিদ্যা",
+            "is_active" : true
+        },
+        {
+            "name": "Psychology",
+            "short_name": "Psy",
+            "code" : 61,
+            "language_type": "Additional Subject",
+            "local_language": "মনোবিজ্ঞান",
+            "is_active" : true
+        },
+        {
+            "name": "Business Method and Correspondence",
+            "short_name": "BS",
+            "code" : 62,
+            "language_type": "Additional Subject",
+            "local_language": "ব্যবসায়িক পদ্ধতি এবং চিঠিপত্র",
+            "is_active" : true
+        },
+        {
+            "name": "BOOK-KEEPING",
+            "short_name": "BK",
+            "code" : 63,
+            "language_type": "Additional Subject",
+            "local_language": "বই রাখা",
+            "is_active" : true
+        },
+        {
+            "name": "El. of Economics & Civics",
+            "short_name": "EC",
+            "code" : 64,
+            "language_type": "Additional Subject",
+            "local_language": "এল. অর্থনীতি ও নাগরিক বিজ্ঞানের",
+            "is_active" : true
+        },
+        {
+            "name": "Home Science",
+            "short_name": "Hs",
+            "code" : 65,
+            "language_type": "Additional Subject",
+            "local_language": "হোম সায়েন্স",
+            "is_active" : true
+        },
+        {
+            "name": "Music-Vocal",
+            "short_name": "Mv",
+            "code" : 66,
+            "language_type": "Additional Subject",
+            "local_language": "মিউজিক-ভোকাল",
+            "is_active" : true
+        },
+        {
+            "name": "Music (Instrumental)",
+            "short_name": "Mv",
+            "code" : 67,
+            "language_type": "Additional Subject",
+            "local_language": "সঙ্গীত (ইনস্ট্রুমেন্টাল)",
+            "is_active" : true
+        },
+        {
+            "name": "Sewing & Needle Craft",
+            "short_name": "Mv",
+            "code" : 70,
+            "language_type": "Additional Subject",
+            "local_language": "সেলাই এবং সুই কারুকাজ",
+            "is_active" : true
+        },
+        {
+            "name": "El. of Agri. and Horticulture",
+            "short_name": "Ag",
+            "code" : 71,
+            "language_type": "Additional Subject",
+            "local_language": "এল. কৃষি এবং উদ্যানপালন",
+            "is_active" : true
+        },
+        {
+            "name": "Pisciculture",
+            "short_name": "Ps",
+            "code" : 72,
+            "language_type": "Additional Subject",
+            "local_language": "মৎস্য চাষ",
+            "is_active" : true
+        },
+        {
+            "name": "Animal Husbandry including Poultry Farming",
+            "short_name": "Ah",
+            "code" : 73,
+            "language_type": "Additional Subject",
+            "local_language": "পশুপালন সহ পোল্ট্রি ফার্মিং",
+            "is_active" : true
+        },
+        {
+            "name": "Shorthand & Type Writing",
+            "short_name": "ST",
+            "code" : 74,
+            "language_type": "Additional Subject",
+            "local_language": "শর্টহ্যান্ড ও টাইপ রাইটিং",
+            "is_active" : true
+        },
+        {
+            "name": "Physiology & Hygiene",
+            "short_name": "Hy",
+            "code" : 76,
+            "language_type": "Additional Subject",
+            "local_language": "ফিজিওলজি এবং হাইজিন",
+            "is_active" : true
+        },
+        {
+            "name": "Work Education",
+            "short_name": "WPS",
+            "code" : 84,
+            "language_type": "Additional Subject",
+            "local_language": "কাজের শিক্ষা",
+            "is_active" : true
+        },
+        {
+            "name": "Computer Application",
+            "short_name": "Ca",
+            "code" : 85,
+            "language_type": "Additional Subject",
+            "local_language": "কম্পিউটার এ্যাপ্লিকেশন",
+            "is_active" : true
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "adminMenu": [
+        {
+            "name": "Dashboard"
+        },
+        {
+            "name": "Admin User"
+        },
+        {
+            "name": "Admin Management Site Engineering"
+        },
+        {
+            "name": "Admin Role Permissions"
+        },
+        {
+            "name": "Admin Company"
+        },
+        {
+            "name": "Admin Project"
+        }
+    ]
+}

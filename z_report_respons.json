@@ -1,0 +1,33 @@
+"id" => 1
+"uuid" => "2c25d950-6906-4389-954b-f7d0a57a6e3d""inv_returns_id" => 6
+"materials_id" => null
+"return_no" => "389796""date" => "2024-04-19""type" => "29""inv_issue_lists_id" => 1
+"img" => null
+"remarkes" => null
+"company_id" => 2
+"is_active" => 1
+"created_at" => "2024-04-17T06:57:23.000000Z""updated_at" => "2024-04-17T06:57:23.000000Z""deleted_at" => null
+"inv_return" => array: 14 [
+    "id" => 6
+"uuid" => "94cd883f-fdb7-4201-aa23-4d1fc63caa43""name" => "2024-04-17""date" => "2024-04-17""details" => null
+"remarks" => null
+"projects_id" => 1
+"store_id" => null
+"user_id" => 2
+"company_id" => 2
+"is_active" => 1
+"created_at" => "2024-04-17T06:26:08.000000Z""updated_at" => "2024-04-17T06:26:08.000000Z""inv_return_store" => array: 1 [
+        0 => array: 11 [
+            "id" => 1
+"uuid" => "ed546e65-7893-44b4-ba27-6aa418dd795c""name" => "SFT store""location" => "kolata""company_id" => 2
+"projects_id" => 1
+"is_active" => 1
+"created_at" => "2023-10-03T13:26:42.000000Z""updated_at" => "2023-10-03T13:26:42.000000Z""deleted_at" => null
+"pivot" => array: 2 [
+                "inv_returns_id" => 6
+"store_warehouses_id" => 1
+            ]
+        ]
+    ]
+]
+]

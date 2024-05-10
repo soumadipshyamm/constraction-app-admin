@@ -1,0 +1,20 @@
+{
+    "roles": [
+        {
+            "name": "Super Admin"
+
+        },
+        {
+            "name": "Sub Admin"
+
+        },
+        {
+            "name": "Account Admin"
+
+        },
+        {
+            "name": "Content Manager"
+
+        }
+    ]
+}
