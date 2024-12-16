@@ -317,6 +317,7 @@ public function materialrequestSendToVendor(Request $request)
     }
 }
 
+php artisan make:mail MaterialRequestMail
 
 php artisan make:mail VendorQuoteNotification --markdown=emails.vendor_quote_notification
 
