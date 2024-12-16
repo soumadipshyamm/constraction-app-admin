@@ -233,3 +233,322 @@ class QuotesDetailsController extends BaseController
         }
     }
 }
+
+
+
+######################################################################################################################################
+######################################################################################################################################
+######################################################################################################################################
+use App\Mail\VendorQuoteNotification; // Assuming this mail class is created
+use Illuminate\Support\Facades\Mail;
+
+public function materialrequestSendToVendor(Request $request)
+{
+    // Authenticate and retrieve the company ID
+    $authCompany = Auth::guard('company-api')->user()->company_id;
+
+    // Validate incoming request
+    $validator = Validator::make($request->all(), [
+        'type' => 'required|integer',
+        'vendor_id' => 'required|array',
+        'quotes_details_id' => 'nullable|array',
+        'quotes_id' => 'required|array',
+        'material_request_details_id' => 'nullable|array',
+        'materials_id' => 'nullable|array',
+        'material_requests_id' => 'nullable|array',
+    ]);
+
+    if ($validator->fails()) {
+        return $this->responseJson(false, 422, $validator->errors()->first(), []);
+    }
+
+    DB::beginTransaction();
+    try {
+        // Extract validated input
+        $type = $request->input('type');
+        $vendorIds = $request->input('vendor_id');
+        $quotesIdList = $request->input('quotes_id');
+        $quotesDetailsIdList = $request->input('quotes_details_id', []);
+        $materialRequestDetailsIdList = $request->input('material_request_details_id', []);
+        $materialsIdList = $request->input('materials_id', []);
+
+        $quoteDetails = [];
+
+        // Loop through vendors and quotes to create records
+        foreach ($vendorIds as $vendorId) {
+            foreach ($quotesIdList as $index => $quoteId) {
+                $quoteDetails[] = QuotesMaterialSendVendor::create([
+                    'vendors_id' => $vendorId,
+                    'materials_id' => $materialsIdList[$index] ?? null,
+                    'quotes_details_id' => $quotesDetailsIdList[$index] ?? null,
+                    'quotes_id' => $quoteId,
+                    'material_request_details_id' => $materialRequestDetailsIdList[$index] ?? null,
+                    'type' => $type,
+                    'company_id' => $authCompany,
+                ]);
+            }
+
+            // After processing each vendor, send them an email
+            $vendor = Vendor::find($vendorId); // Assuming the Vendor model exists
+            if ($vendor && $vendor->email) {
+                // Prepare data for the email
+                $emailData = [
+                    'vendor' => $vendor,
+                    'type' => $type,
+                    'quotes' => $quoteDetails, // You can pass specific details here
+                ];
+
+                // Send email using the mail class
+                Mail::to($vendor->email)->send(new VendorQuoteNotification($emailData));
+            }
+        }
+
+        // Commit transaction
+        DB::commit();
+
+        // Return resource collection
+        $quoteDetailResource = QuotesMaterialRequestSendVendorResource::collection($quoteDetails);
+
+        return $this->responseJson(true, 200, 'Quote Details Updated and Emails Sent Successfully', $quoteDetailResource);
+    } catch (\Exception $e) {
+        DB::rollBack();
+        logger("Error: {$e->getMessage()} in {$e->getFile()} on line {$e->getLine()}");
+        return $this->responseJson(false, 500, 'An error occurred while processing the request.', []);
+    }
+}
+
+
+php artisan make:mail VendorQuoteNotification --markdown=emails.vendor_quote_notification
+
+
+    namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class VendorQuoteNotification extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $data;
+
+    /**
+     * Create a new message instance.
+     *
+     * @param array $data
+     * @return void
+     */
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->subject('New Quote Request')
+                    ->markdown('emails.vendor_quote_notification')
+                    ->with('data', $this->data);
+    }
+}
+
+
+
+resources/views/emails/vendor_quote_notification.blade.php
+
+@component('mail::message')
+# Quote Request for Vendor
+
+Hello {{ $data['vendor']->name }},
+
+We have a new quote request for you.
+
+**Quote Type:** {{ $data['type'] }}
+
+@component('mail::table')
+| Material | Quantity | Quote ID |
+| -------- | -------- | -------- |
+@foreach ($data['quotes'] as $quote)
+| {{ $quote->material->name ?? 'N/A' }} | {{ $quote->quantity ?? 'N/A' }} | {{ $quote->quotes_id }} |
+@endforeach
+@endcomponent
+
+Thanks,<br>
+{{ config('app.name') }}
+@endcomponent
+
+
+
+OoooooooooooooooooooooooooooRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Material Request</title>
+</head>
+<body>
+    <h3>Hello {{ $data['vendorName'] }},</h3>
+    <p>{{ $data['message'] }}</p>
+    <p><strong>Quote ID:</strong> {{ $data['quoteId'] }}</p>
+    <p><strong>Material ID:</strong> {{ $data['materialsId'] }}</p>
+    <p><strong>Company:</strong> {{ $data['companyName'] }}</p>
+    <br>
+    <p>Thank you,</p>
+    <p>Your Company</p>
+</body>
+</html>
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+php artisan make:job SendMaterialRequestMailJob
+
+<?php
+
+namespace App\Jobs;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MaterialRequestMail;
+
+class SendMaterialRequestMailJob implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public $vendorEmail;
+    public $mailData;
+
+    /**
+     * Create a new job instance.
+     *
+     * @param string $vendorEmail
+     * @param array $mailData
+     */
+    public function __construct($vendorEmail, $mailData)
+    {
+        $this->vendorEmail = $vendorEmail;
+        $this->mailData = $mailData;
+    }
+
+    /**
+     * Execute the job.
+     */
+    public function handle()
+    {
+        Mail::to($this->vendorEmail)->send(new MaterialRequestMail($this->mailData));
+    }
+}
+
+
+
+use App\Jobs\SendMaterialRequestMailJob;
+
+public function materialrequestSendToVendor(Request $request)
+{
+    $authCompany = Auth::guard('company-api')->user()->company_id;
+
+    // Validate incoming request
+    $validator = Validator::make($request->all(), [
+        'type' => 'required|integer',
+        'vendor_id' => 'required|array',
+        'quotes_details_id' => 'nullable|array',
+        'quotes_id' => 'required|array',
+        'material_request_details_id' => 'nullable|array',
+        'materials_id' => 'nullable|array',
+    ]);
+
+    if ($validator->fails()) {
+        return $this->responseJson(false, 422, $validator->errors()->first(), []);
+    }
+
+    DB::beginTransaction();
+    try {
+        $type = $request->input('type');
+        $vendorIds = $request->input('vendor_id');
+        $quotesIdList = $request->input('quotes_id');
+        $quotesDetailsIdList = $request->input('quotes_details_id', []);
+        $materialRequestDetailsIdList = $request->input('material_request_details_id', []);
+        $materialsIdList = $request->input('materials_id', []);
+
+        $quoteDetails = [];
+
+        foreach ($vendorIds as $vendorId) {
+            foreach ($quotesIdList as $index => $quoteId) {
+                $record = QuotesMaterialSendVendor::create([
+                    'vendors_id' => $vendorId,
+                    'materials_id' => $materialsIdList[$index] ?? null,
+                    'quotes_details_id' => $quotesDetailsIdList[$index] ?? null,
+                    'quotes_id' => $quoteId,
+                    'material_request_details_id' => $materialRequestDetailsIdList[$index] ?? null,
+                    'type' => $type,
+                    'company_id' => $authCompany,
+                ]);
+
+                $quoteDetails[] = $record;
+
+                // Prepare email data
+                $vendor = Vendor::find($vendorId);
+                if ($vendor && $vendor->email) {
+                    $mailData = [
+                        'vendorName' => $vendor->name,
+                        'quoteId' => $quoteId,
+                        'materialsId' => $materialsIdList[$index] ?? 'N/A',
+                        'companyName' => $authCompany,
+                        'message' => 'You have received a new material request.',
+                    ];
+
+                    // Dispatch job to send email
+                    SendMaterialRequestMailJob::dispatch($vendor->email, $mailData);
+                }
+            }
+        }
+
+        DB::commit();
+
+        $quoteDetailResource = QuotesMaterialRequestSendVendorResource::collection($quoteDetails);
+
+        return $this->responseJson(true, 200, 'Quote Details Updated and Emails Queued Successfully', $quoteDetailResource);
+    } catch (\Exception $e) {
+        DB::rollBack();
+        logger("Error: {$e->getMessage()} in {$e->getFile()} on line {$e->getLine()}");
+        return $this->responseJson(false, 500, 'An error occurred while processing the request.', []);
+    }
+}
+
+
+
+
+QUEUE_CONNECTION=database
+
+php artisan queue:table
+php artisan migrate
+php artisan queue:work
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Material Request</title>
+</head>
+<body>
+    <h3>Hello {{ $data['vendorName'] }},</h3>
+    <p>{{ $data['message'] }}</p>
+    <p><strong>Quote ID:</strong> {{ $data['quoteId'] }}</p>
+    <p><strong>Material ID:</strong> {{ $data['materialsId'] }}</p>
+    <p><strong>Company:</strong> {{ $data['companyName'] }}</p>
+    <br>
+    <p>Thank you,</p>
+    <p>Your Company</p>
+</body>
+</html>
+
+
+
+
+
