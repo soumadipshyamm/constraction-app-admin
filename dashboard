@@ -1,0 +1,463 @@
+
+@push('scripts')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="{{ asset('company_assets/js/ajax/dashboardchart.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        // Initialize date range picker
+        initializeDateRangePicker();
+
+        // Load active tab from local storage
+        loadActiveTab();
+
+        // Event handlers for project dropdowns
+        $('#from_project, #from_project_work_process, #from_project_stocks').change(debounce(handleProjectChange, 300));
+
+        // Function to initialize date range picker
+        function initializeDateRangePicker() {
+            $('input[name="dates"]').daterangepicker();
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+            }, cb);
+            cb(start, end);
+        }
+
+        // Function to load active tab from local storage
+        function loadActiveTab() {
+            var activeTab = localStorage.getItem('activeTab');
+            if (activeTab) {
+                $('button[data-bs-target="' + activeTab + '"]').tab('show');
+            }
+        }
+
+        // Debounce function to limit the rate of function calls
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Handle project change for all dropdowns
+        function handleProjectChange() {
+            const projectId = $(this).val();
+            const type = $(this).data('type'); // Assuming data-type attribute is set for each dropdown
+
+            if (projectId) {
+                updateSubprojectsDropdown(projectId, type);
+                fetchInitialData(projectId, type);
+            }
+        }
+
+        // Function to update subprojects dropdown
+        function updateSubprojectsDropdown(projectId, type) {
+            const urlMap = {
+                'overview': 'company/activities/subprojects/',
+                'work_process': 'company/activities/subprojects/',
+                'stocks': 'company/activities/storeprojects/'
+            };
+            const url = baseUrl + urlMap[type] + projectId;
+
+            $.get(url)
+                .done(function(data) {
+                    const dropdownId = type === 'stocks' ? '#from_subproject_stocks' : '#from_subproject';
+                    $(dropdownId).empty();
+                    $.each(data, function(key, value) {
+                        $.each(value.sub_project || value.store_warehouse, function(subkey, subvalue) {
+                            $(dropdownId).append('<option value="' + subvalue.id + '">' + subvalue.name + '</option>');
+                        });
+                    });
+                })
+                .fail(handleError);
+        }
+
+        // Function to fetch initial data based on project type
+        function fetchInitialData(projectId, type) {
+            const subprojectId = (type === 'stocks') ? $('#from_subproject_stocks').val() : $('#from_subproject').val();
+            const date = $('input[name="dates"]').val();
+
+            if (type === 'overview') {
+                fetchWorkOverview(projectId, subprojectId, date);
+            } else if (type === 'work_process') {
+                fetchWorkProcessData(projectId, subprojectId, date);
+            } else if (type === 'stocks') {
+                fetchStockData(projectId, subprojectId, date);
+            }
+        }
+
+        // Function to fetch work overview data
+        function fetchWorkOverview(project, subproject, date) {
+            $.ajax({
+                url: baseUrl + `ajax/get-work-overview`,
+                type: "post",
+                data: {
+                    project: project,
+                    subproject: subproject,
+                    date: date,
+                    _token: $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    renderWorkOverview(response);
+                },
+                error: handleError
+            });
+        }
+
+        // Function to fetch work process data
+        function fetchWorkProcessData(project, subproject, date) {
+            $.ajax({
+                url: baseUrl + `ajax/get-work-process`,
+                type: "post",
+                data: {
+                    project: project,
+                    subproject: subproject,
+                    date: date,
+                    _token: $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    renderWorkProcessChart(response.workProcessData);
+                },
+                error: handleError
+            });
+        }
+
+        // Function to fetch stock data
+        function fetchStockData(project, store, date) {
+            $.ajax({
+                url: baseUrl + `ajax/get-inventory-stocks`,
+                type: "post",
+                data: {
+                    project: project,
+                    store: store,
+                    date: date,
+                    _token: $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    renderStockData(response);
+                },
+                error: handleError
+            });
+        }
+
+        // Centralized error handling
+        function handleError(xhr, status, error) {
+            console.error('Error fetching data:', error);
+            alert('Error fetching data. Please try again later.');
+        }
+
+        // Render work overview
+        function renderWorkOverview(response) {
+            // Your existing rendering logic...
+        }
+
+        // Render work process chart
+        function renderWorkProcessChart(dataPoints) {
+            var chart = new CanvasJS.Chart("workprogressChart", {
+                animationEnabled: true,
+                theme: "light1",
+                title: {
+                    text: "Work Progress Activity",
+                    fontFamily: "Roboto",
+                },
+                data: [{
+                    type: "column",
+                    showInLegend: true,
+                    toolTipContent: "{legendText}",
+                    dataPoints: dataPoints
+                }]
+            });
+            chart.render();
+        }
+
+        // Render stock data
+        function renderStockData(data) {
+            // Your existing rendering logic for stock data...
+        }
+    });
+</script>
+@endpush
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+@push('scripts')
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="{{ asset('company_assets/js/ajax/dashboardchart.js') }}"></script>
+
+<script>
+    $(document).ready(function() {
+        // Load active tab from local storage
+        var activeTab = localStorage.getItem('activeTab') || '#nav-overview';
+        $('button[data-bs-target="' + activeTab + '"]').tab('show');
+        loadTabData(activeTab);
+
+        // Tab click event
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            var activeTab = $(e.target).attr('data-bs-target');
+            localStorage.setItem('activeTab', activeTab);
+            loadTabData(activeTab);
+        });
+
+        // Date range picker initialization
+        $('input[name="dates"]').daterangepicker();
+        initializeDateRangePicker();
+
+        // Event listeners for project dropdown changes
+        $('#from_project, #from_project_work_process, #from_project_stocks').change(function() {
+            var projectId = $(this).val();
+            var dropdownSelector = $(this).data('subproject-dropdown');
+            if (projectId) {
+                updateSubprojectsDropdown(projectId, dropdownSelector);
+            }
+        });
+
+        // Initial data fetch for the overview tab
+        fetchInitialData();
+    });
+
+    function loadTabData(tabId) {
+        switch (tabId) {
+            case '#nav-overview':
+                fetchInitialData();
+                break;
+            case '#nav-work':
+                fetchWorkProcessData();
+                break;
+            case '#nav-stock':
+                fetchStockData();
+                break;
+        }
+    }
+
+    function initializeDateRangePicker() {
+        var start = moment().subtract(29, 'days');
+        var end = moment();
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+        }, cb);
+        cb(start, end);
+    }
+
+    function updateSubprojectsDropdown(projectId, dropdownSelector) {
+        $.get(baseUrl + 'company/activities/subprojects/' + projectId, function(data) {
+            $(dropdownSelector).empty();
+            $.each(data, function(key, value) {
+                $.each(value.sub_project, function(subkey, subvalue) {
+                    $(dropdownSelector).append('<option value="' + subvalue.id + '">' + subvalue.name + '</option>');
+                });
+            });
+        });
+    }
+
+    function fetchInitialData() {
+        var project = $('#from_project').val();
+        var subproject = $('#from_subproject').val();
+        var date = $('#date').val();
+        fetchWorkOverview(project, subproject, date);
+    }
+
+    function fetchWorkOverview(project, subproject, date) {
+        fetchData(baseUrl + `ajax/get-work-overview`, {
+            project: project,
+            subproject: subproject,
+            date: date,
+            _token: $('meta[name="csrf-token"]').attr('content')
+        }, renderWorkOverview);
+    }
+
+    function fetchWorkProcessData() {
+        var project = $('#from_project_work_process').val();
+        var subproject = $('#from_subproject_work_process').val();
+        var date = $('#date').val();
+        fetchData(baseUrl + `ajax/get-work-process`, {
+            project: project,
+            subproject: subproject,
+            date: date,
+            _token: $('meta[name="csrf-token"]').attr('content')
+        }, renderWorkProcessChart);
+    }
+
+    function fetchStockData() {
+        var project = $('#from_project_stocks').val();
+        var store = $('#from_subproject_stocks').val();
+        var date = $('#date_stocks').val();
+        fetchData(baseUrl + `ajax/get-inventory-stocks`, {
+            project: project,
+            store: store,
+            date: date,
+            _token: $('meta[name="csrf-token"]').attr('content')
+        }, renderStockData);
+    }
+
+    function fetchData(url, data, successCallback) {
+        $.ajax({
+            url: url,
+            type: "post",
+            data: data,
+            success: successCallback,
+            error: function(xhr, status, error) {
+                console.error('Error fetching data:', error);
+                alert('Error fetching data. Please try again later.');
+            }
+        });
+    }
+
+    function renderWorkOverview(response) {
+        // Update UI with response data
+        renderWorkStatusChart(response.workStatusData);
+        monthwiseworkProgess(response.chartData);
+        $('#estimatedCost').text(response.estimatedCost);
+        $('#estimatedCostForExecutedQty').text(response.estimatedCostForExecutedQty);
+        $('#balanceEstimate').text(response.balanceEstimate);
+        $('#excessEstimateCost').text(response.excessEstimateCost);
+        $('#totalActivites').text(response.totalActivites);
+        $('#inProgress').text(response.inProgress);
+        $('#notStart').text(response.notStart);
+        $('#completed').text(response.completed);
+        $('#totalDuration').text(response.totalDuration);
+        $('#projectcompleted').text(response.projectcompleted);
+        $('#remaining').text(Math.abs(response.remaining));
+
+        // Update progress bars
+        $('#planeProgress').css('width', `${response.planeProgress}%`).attr('aria-valuenow', response.planeProgress).text(`${response.planeProgress}%`);
+        $('#actualProgress').css('width', `${response.actualProgress}%`).attr('aria-valuenow', response.actualProgress).text(`${response.actualProgress}%`);
+        $('#variation').css('width', `${response.variation}%`).attr('aria-valuenow', response.variation).text(`${response.variation}%`);
+
+        // Clear previous users data
+        $('#dprusers').empty();
+        if (response.users && response.users.length > 0) {
+            const usersHtml = response.users.map(user => {
+                if (user && user.id) {
+                    return `<div class="singletabdtl col-md-10"><p>${user.name}</p>
+                        <a href="${generateDprDetailsUrl(user.id)}" class="dprs_data view_btn float-end" data-id="${user.id}">View</a></div>`;
+                }
+                return '';
+            }).join('');
+            $('#dprusers').append(usersHtml);
+        }
+
+        // Render DPR table
+        renderDprTable(response.fetchDpr);
+        // Render vendor labour list
+        renderVendorLabourList(response.vendorWiseLabourListing);
+    }
+
+    function generateDprDetailsUrl(userId) {
+        return `{{ route('company.report.dprDetails', ['pid' => ':project', 'uid' => ':userId', 'date' => ':date']) }}`
+            .replace(':project', $('#from_project').val())
+            .replace(':userId', userId)
+            .replace(':date', $('#date').val());
+    }
+
+    function renderDprTable(dprData) {
+        var dprContainer = $('#dprContainer');
+        dprContainer.empty();
+        if (dprData && dprData.length > 0) {
+            var tableHtml = '<table class="table table-bordered" id="dataTable"><thead><tr><th>User\'s Name</th><th>Historie Names</th><th>Safetie Names</th></tr></thead><tbody>';
+            dprData.forEach(function(dpr) {
+                var userName = dpr.users && dpr.users.name ? dpr.users.name : 'Not Available';
+                var historieNames = dpr.historie && dpr.historie.length > 0 ? dpr.historie.map(h => h.details || 'No Name').join(', ') : 'No Historie Data Available';
+                var safetieNames = dpr.safetie && dpr.safetie.length > 0 ? dpr.safetie.map(s => s.name || 'No Name').join(', ') : 'No Safetie Data Available';
+                tableHtml += `<tr><td>${userName}</td><td>${historieNames}</td><td>${safetieNames}</td></tr>`;
+            });
+            tableHtml += '</tbody></table>';
+            dprContainer.html(tableHtml);
+            $('#dataTable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true,
+                lengthChange: true,
+                pageLength: 10,
+                dom: 'Bfrtip',
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+            });
+        } else {
+            dprContainer.html('<p>No data available</p>');
+        }
+    }
+
+    function renderVendorLabourList(vendorData) {
+        var vendorLabourContainer = $('#vendorLabourContainer');
+        vendorLabourContainer.empty();
+        if (vendorData && vendorData.length > 0) {
+            var listHtml = '';
+            vendorData.forEach(function(vendorItem) {
+                var vendor = vendorItem.vendor;
+                var labourCount = vendorItem.labour_count;
+                listHtml += `<div class="single_content"><p class="singcon_left">${vendor.name}</p><p>${labourCount}</p></div>`;
+            });
+            vendorLabourContainer.html(listHtml);
+        } else {
+            vendorLabourContainer.html('<p>No data available</p>');
+        }
+    }
+
+    function renderWorkProcessChart(dataPoints) {
+        var chart = new CanvasJS.Chart("workprogressChart", {
+            animationEnabled: true,
+            theme: "light1",
+            title: {
+                text: "Work Progress Activity",
+                fontFamily: "Roboto",
+            },
+            data: [{
+                type: "column",
+                showInLegend: true,
+                toolTipContent: "{legendText}",
+                dataPoints: dataPoints
+            }]
+        });
+        chart.render();
+    }
+
+    function renderStockData(response) {
+        // Implement rendering logic for stock data
+        // Similar to how work overview and work process data are rendered
+    }
+
+    // Additional functions for handling stock data rendering can be added here
+
+</script>
+@endpush
