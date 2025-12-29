@@ -1,0 +1,89 @@
+{
+    "assets": [
+        {
+            "name": "Machinery Hire",
+            "specification": "Various types of machinery available",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Excavator Hire",
+            "specification": "Excavators for heavy lifting",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Concrete Mixer Hire",
+            "specification": "Portable concrete mixers",
+            "unit": "Day"
+        },
+        {
+            "name": "Vibrator Hire",
+            "specification": "Concrete vibrators for compaction",
+            "unit": "Day"
+        },
+        {
+            "name": "DG Hire",
+            "specification": "Diesel generators for power supply",
+            "unit": "Day"
+        },
+        {
+            "name": "Poclain machine Hire",
+            "specification": "Poclain machines for excavation",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Road Roller Hire",
+            "specification": "Rollers for road construction",
+            "unit": "Day"
+        },
+        {
+            "name": "Tipper Hire",
+            "specification": "Tipper trucks for material transport",
+            "unit": "Day"
+        },
+        {
+            "name": "Compactor Hire",
+            "specification": "Compactors for soil and asphalt",
+            "unit": "Day"
+        },
+        {
+            "name": "Breaker Hire",
+            "specification": "Breakers for demolition work",
+            "unit": "Day"
+        },
+        {
+            "name": "MS Props",
+            "specification": "Mild steel props for support",
+            "unit": "Nos"
+        },
+        {
+            "name": "MS Shikanja",
+            "specification": "Mild steel shikanja for scaffolding",
+            "unit": "Nos"
+        },
+        {
+            "name": "MS Shuttering Plates",
+            "specification": "Mild steel plates for formwork",
+            "unit": "Nos"
+        },
+        {
+            "name": "Concrete Breaker Machine",
+            "specification": "Machines for breaking concrete",
+            "unit": "Nos"
+        },
+        {
+            "name": "Measuring Tape",
+            "specification": "Tapes for measurement",
+            "unit": "Nos"
+        },
+        {
+            "name": "Helmets",
+            "specification": "Safety helmets for protection",
+            "unit": "Nos"
+        },
+        {
+            "name": "Safety Belt",
+            "specification": "Safety belts for harnessing",
+            "unit": "Nos"
+        }
+    ]
+}

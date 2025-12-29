@@ -1,0 +1,110 @@
+
+{
+    "assets": [
+        {
+            "name": "Machinery Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Excavator Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Concrete Mixer Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Vibrator Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "DG Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Poclain machine Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Hrs"
+        },
+        {
+            "name": "Road Roller Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Tipper Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Compactor Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Breaker Hire",
+            "specification": "(JCB/Others)",
+            "unit": "Day"
+        },
+        {
+            "name": "Submersible Pump",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Submersible Pump",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Submersible Pump",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Submersible Pump",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "MS Props",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "MS Shikanja",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "MS Shuttering Plates",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Concrete Breaker Machine",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Measuring Tape",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Helmets",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        },
+        {
+            "name": "Safety Belt",
+            "specification": "(JCB/Others)",
+            "unit": "Nos"
+        }
+    ]
+}

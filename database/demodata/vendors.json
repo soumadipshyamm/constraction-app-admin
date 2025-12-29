@@ -1,0 +1,20 @@
+{
+    "vendor": [
+        {
+            "name": "One Test Contractor",
+            "type": "contractor",
+            "address": "Delhi,India",
+            "contact_person_name": "Test contractor Name",
+            "email": "rajesh@gmail.com",
+            "phone": "9876543210"
+        },
+        {
+            "name": "One Test Supplier",
+            "type": "supplier",
+            "address": "Delhi,India",
+            "contact_person_name": "Test supplier Name",
+            "email": "rajesh@gmail.com",
+            "phone": "9876543233"
+        }
+    ]
+}

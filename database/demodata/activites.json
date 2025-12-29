@@ -1,0 +1,492 @@
+{
+    "activite": [
+        {
+            "name": "Excavation & Misc",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Line out & Cleaning of site",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Excavation in Soft Soil/Murrum",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Excavation in Hard Rock",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Pile work",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Backfilling",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Soil Compactions",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Anti Termit treatment",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "PCC",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "PCC for Footing",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "PCC for Plinth Beams",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "PCC for Road",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "DPC",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Steel Reinforcement",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Steel for Footing",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Column",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Beams",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Slabs",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Water Tanks",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Retaining wall",
+                    "unit": "MT",
+                    "type": "activites"
+                },
+                {
+                    "name": "Steel for Road work",
+                    "unit": "MT",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Concrete Work",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Concrete for Footing",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Column",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Beams",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Slabs",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Water Tanks",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Retaining wall",
+                    "unit": "Cft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete for Road work",
+                    "unit": "Cft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Masonry",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Red Burnt Bricks work with Mortar",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concrete block work with Mortar",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Eco Block work with mortar",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Stone masonry work",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Brick bat work",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Wall Cladding",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Plastering, Gypsum, POP",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Internal cement sand plastering",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Gypsum Plaster",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "External Cement Sand Plaster",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Ceiling plaster",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Water Proofing",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Rough Shahabad waterproofing",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Brick Bat waterproofing",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Doors & Windows",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Window Frame",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Door Frames",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Main Door",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Bath & Toilet Door",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Bedroom & Other Doors",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Aluminium Sliding Window 2 track",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Aluminium Sliding windows",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Aluminium Sliding doors",
+                    "unit": "Nos",
+                    "type": "activites"
+                },
+                {
+                    "name": "Bath & Toilet Louvers",
+                    "unit": "Nos",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Tiling & Paver Work",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Vitrified Tiles Flooring",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Anti Skid Tiles for Bathroom & other Floor",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Vitrified Tiles Skirting",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Anti Skid Tiles Skirting",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Dado For Bathroom",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Dado for Kitchen & Dry Balcony",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Kitchen Otta",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Window Sill -Marbles",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Door Frames -Marbles",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Staircase tiling",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Paving Block work",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Railing & Fabrication work",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "MS Window Grills",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "MS Railing",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "SS Railing",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Metal Gate",
+                    "unit": " ",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Electrical",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Laying Conduit Pipes in Slabs",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Laying Conduit Pipes in walls",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Concealed wiring",
+                    "unit": " ",
+                    "type": "activites"
+                },
+                {
+                    "name": "Fixing MCB, switchboards, sockets & Appliances",
+                    "unit": "LS",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Plumbing",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Laying Plumbing Pipes",
+                    "unit": "Rft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Drainage System Setup",
+                    "unit": " ",
+                    "type": "activites"
+                },
+                {
+                    "name": "Fixtures & Fitting Installations (Kitchen, Bath & Toilet)",
+                    "unit": "Nos",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Painting",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Internal Primer",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Internal Painting 1st & 2nd Coat",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "External Primer",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "External Painting 1st & 2nd Coat",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Oil Paint for Grills & Railing",
+                    "unit": "Rmt",
+                    "type": "activites"
+                }
+            ]
+        },
+        {
+            "name": "Bituminous Works",
+            "unit": " ",
+            "type": "heading",
+            "children": [
+                {
+                    "name": "Water proofing with Bitumin",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Prime Coat for Road-praying bitumin",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Dense Bituminous Macadam",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Tack Coat for Road- Praying bitumin",
+                    "unit": "Sft",
+                    "type": "activites"
+                },
+                {
+                    "name": "Bituminous Concrete",
+                    "unit": "Sft",
+                    "type": "activites"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "entryType":[
+
+        {
+            "name" : "Direct"
+        },
+        {
+            "name" : "From PO"
+        },
+        {
+            "name" : "From PR"
+        },
+        {
+            "name" : "From Other Project"
+        },
+        {
+            "name" : "Cash Purchase"
+        },
+        {
+            "name" : "Same project-other stores"
+        },
+        {
+            "name" : "From Client"
+        }
+     ]
+}

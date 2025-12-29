@@ -1,0 +1,105 @@
+{
+    "subjects": [
+        
+        {
+            "name": "Bengali (FL)",
+            "short_name": "B",
+            "code" : 2,
+            "language_type": "First Language",
+            "local_language": "বাংলা (প্রথম ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "English (FL)",
+            "short_name": "E",
+            "code" : 3,
+            "language_type": "First Language",
+            "local_language": "ইংরেজি",
+            "is_active" : true
+        },
+        {
+            "name": "English (SL)",
+            "short_name": "E",
+            "code" : 21,
+            "language_type": "Second Language",
+            "local_language": "ইংরেজি (দ্বিতীয় ভাষা)",
+            "is_active" : true
+        },
+        {
+            "name": "Bengali (SL)",
+            "short_name": "B",
+            "code" : 22,
+            "language_type": "Second Language",
+            "local_language": "বাংলা (দ্বিতীয় ভাষা)",
+            "is_active" : true
+        },
+        
+        {
+            "name": "History (Bengali Version)",
+            "short_name": "H",
+            "code" : 24,
+            "language_type": "Second Language",
+            "local_language": "ইতিহাস (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        
+        {
+            "name": "Geography(Bengali Version)",
+            "short_name": "G",
+            "code" : 25,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভূগোল (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        
+        {
+            "name": "Mathematics(Bengali Version)",
+            "short_name": "M",
+            "code" : 26,
+            "language_type": "Compulsory Subject",
+            "local_language": "গণিত (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Physical Sc.(Bengali Version) (Regular)",
+            "short_name": "Psc.",
+            "code" : 27,
+            "language_type": "Compulsory Subject",
+            "local_language": "ভৌত বিজ্ঞান (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        
+        {
+            "name": "Life Sc.(Bengali Version)",
+            "short_name": "Lsc.",
+            "code" : 28,
+            "language_type": "Compulsory Subject",
+            "local_language": "জীবন বিজ্ঞান (বাংলা সংস্করণ)",
+            "is_active" : true
+        },
+        {
+            "name": "Sanskrit",
+            "short_name": "S",
+            "code" : 37,
+            "language_type": "Additional Subject",
+            "local_language": "সংস্কৃত",
+            "is_active" : true
+        },        
+        {
+            "name": "Geography",
+            "short_name": "Geo",
+            "code" : 58,
+            "language_type": "Additional Subject",
+            "local_language": "ভূগোল",
+            "is_active" : true
+        },
+        {
+            "name": "Computer Application",
+            "short_name": "Ca",
+            "code" : 85,
+            "language_type": "Additional Subject",
+            "local_language": "কম্পিউটার এ্যাপ্লিকেশন",
+            "is_active" : true
+        }
+    ]
+}

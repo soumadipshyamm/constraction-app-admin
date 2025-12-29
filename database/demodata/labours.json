@@ -1,0 +1,60 @@
+{
+    "labour": [
+        {
+            "category": "skilled",
+            "name": "Supervisor"
+        },
+        {
+            "category": "skilled",
+            "name": "Masons"
+        },
+        {
+            "category": "skilled",
+            "name": "Carpenters"
+        },
+        {
+            "category": "skilled",
+            "name": "Electricians"
+        },
+        {
+            "category": "skilled",
+            "name": "Plumbers"
+        },
+        {
+            "category": "skilled",
+            "name": "Welders"
+        },
+        {
+            "category": "skilled",
+            "name": "Fitters"
+        },
+        {
+            "category": "skilled",
+            "name": "Tilers"
+        },
+        {
+            "category": "skilled",
+            "name": "Painter"
+        },
+        {
+            "category": "skilled",
+            "name": "Foremen"
+        },
+        {
+            "category": "semiskilled",
+            "name": "Helpers"
+        },
+        {
+            "category": "unskilled",
+            "name": "Male Coolie"
+        },
+        {
+            "category": "unskilled",
+            "name": "Female Coolie"
+        },
+        {
+            "category": "unskilled",
+            "name": "General Laborers"
+        }
+    ]
+}

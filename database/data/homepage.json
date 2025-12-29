@@ -1,0 +1,26 @@
+{
+    "homepage":[
+
+        {
+            "name" : "banner section"
+        },
+        {
+            "name" : "section one"
+        },
+        {
+            "name" : "section two"
+        },
+        {
+            "name" : "section three"
+        },
+        {
+            "name" : "section fourth "
+        },
+        {
+            "name" : "section five"
+        },
+        {
+            "name" : "section six"
+        }
+     ]
+}

@@ -1,0 +1,26 @@
+{
+    "companyMenu": [
+        {
+            "name": "Dashboard"
+        },
+        {
+            "name": "User Managment"
+        },
+        {
+            "name": "Role-Permission"
+        },
+        {
+            "name": "Companies"
+        },
+        {
+            "name": "Project"
+        },
+        {
+            "name": "Sub-Project"
+        }
+    ]
+}
+
+
+
+

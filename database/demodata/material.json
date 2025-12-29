@@ -1,0 +1,652 @@
+{
+    "materials": [
+        {
+            "name": "Cement",
+            "specification": "OPC",
+            "unit": "Bags",
+            "class": "A"
+        },
+        {
+            "name": "Cement",
+            "specification": "PPC",
+            "unit": "Bulk",
+            "class": "A"
+        },
+        {
+            "name": "Fly Ash",
+            "specification": " ",
+            "unit": "Bags",
+            "class": "A"
+        },
+        {
+            "name": "Sand",
+            "specification": "River",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Sand",
+            "specification": "Crush",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Metal/Aggregates",
+            "specification": "12mm",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Metal/Aggregates",
+            "specification": "20mm",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "RMC",
+            "specification": "M20",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "RMC",
+            "specification": "M25",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "RMC",
+            "specification": "M40",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Tmt Concrete",
+            "specification": " ",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "6mm",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "8mm",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "10mm",
+            "unit": "MT",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "12mm",
+            "unit": "MT",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "16mm",
+            "unit": "MT",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "20mm",
+            "unit": "MT",
+            "class": "A"
+        },
+        {
+            "name": "Steel",
+            "specification": "40mm",
+            "unit": "MT",
+            "class": "A"
+        },
+        {
+            "name": "Binding wire",
+            "specification": " ",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Bonding Chemical",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Admixtures",
+            "specification": " ",
+            "unit": "",
+            "class": "C"
+        },
+        {
+            "name": "Murrum",
+            "specification": "Soft",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Murrum",
+            "specification": "Hard",
+            "unit": "Cft",
+            "class": "A"
+        },
+        {
+            "name": "Block Bricks",
+            "specification": "4 Inches",
+            "unit": "Nos",
+            "class": "A"
+        },
+        {
+            "name": "Block Bricks",
+            "specification": "6 Inches",
+            "unit": "Nos",
+            "class": "A"
+        },
+        {
+            "name": "Bricks",
+            "specification": "8 Inches",
+            "unit": "Nos",
+            "class": "A"
+        },
+        {
+            "name": "Bricks",
+            "specification": "9 Inches",
+            "unit": "Nos",
+            "class": "A"
+        },
+        {
+            "name": "Brick Bats",
+            "specification": " ",
+            "unit": "Cft",
+            "class": "C"
+        },
+        {
+            "name": "Chicken Mesh",
+            "specification": " ",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Wire Nails",
+            "specification": " ",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Paving Blocks",
+            "specification": " ",
+            "unit": "Kgs",
+            "class": "A"
+        },
+        {
+            "name": "Vitrified Tiles",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Anti Skid Tiles",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Ceramic Tiles",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Marble",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Granite Stone",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Kota Polished",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Kadappa Stone",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Wall Cladding",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "A"
+        },
+        {
+            "name": "Araldite",
+            "specification": " ",
+            "unit": "Kgs",
+            "class": "C"
+        },
+        {
+            "name": "HCL Acid",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Fevicol",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Water",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "A"
+        },
+        {
+            "name": "Water Tanker",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Wooden Doors",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Doors",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Metal Door",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Door Handles",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Cylindrical Lock",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Eye Piece",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Latch",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Magnetic catcher for Doors",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Hinges",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Aluminium Windows",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "B"
+        },
+        {
+            "name": "Glass Windows",
+            "specification": " ",
+            "unit": "Sft",
+            "class": "B"
+        },
+        {
+            "name": "Terrace Door",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Wooden Flooring",
+            "specification": " ",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Wash Basin",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Angle Cock",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Indian Toilet Pan",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Western Toilet Commode",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Pillar Cock",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Bib Cock",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Nahani Trap",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Valves",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Pipes",
+            "specification": "1/2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Pipes",
+            "specification": "1 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Pipes",
+            "specification": "1.5 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Pipes",
+            "specification": "2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Elbows",
+            "specification": "1 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "PVC Elbows",
+            "specification": "2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Tee",
+            "specification": "1/2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Tee",
+            "specification": "1 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Tee",
+            "specification": "1.5 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Tee",
+            "specification": "2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Coupling",
+            "specification": "1/2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Coupling",
+            "specification": "1 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Coupling",
+            "specification": "1.5 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Coupling",
+            "specification": "2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "CPVC Reducer",
+            "specification": "1/2 Inches to 2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Teflon Tape",
+            "specification": " ",
+            "unit": "",
+            "class": "C"
+        },
+        {
+            "name": "Wires",
+            "specification": "1 Sqmm",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Wires",
+            "specification": "1.5 Sqmm",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Wires",
+            "specification": "2 Sqmm",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Wires",
+            "specification": "4 Sqmm",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Earthing Plate",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Switch & Sockets",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "MCB",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Meter",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Oil Paint",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Primer",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Polish Paper",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Polish Patra",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Paint Roller",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Paint Brush",
+            "specification": " ",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Red Oxide",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Thinner",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Turpentine",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Wall Putty",
+            "specification": " ",
+            "unit": "Bags",
+            "class": "C"
+        },
+        {
+            "name": "Measuring Tape",
+            "specification": "1/2 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Hose Pipe",
+            "specification": "1 Inches",
+            "unit": "Nos",
+            "class": "B"
+        },
+        {
+            "name": "Hose Pipe",
+            "specification": " ",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Nylon Rope",
+            "specification": " ",
+            "unit": "Rft",
+            "class": "B"
+        },
+        {
+            "name": "Oil",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Cover Blocks",
+            "specification": "20mm",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Cover Blocks",
+            "specification": "25mm",
+            "unit": "Nos",
+            "class": "C"
+        },
+        {
+            "name": "Petrol",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        },
+        {
+            "name": "Diesel",
+            "specification": " ",
+            "unit": "Ltr",
+            "class": "C"
+        }
+    ]
+}

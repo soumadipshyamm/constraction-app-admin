@@ -1,0 +1,28 @@
+{
+    "InvIssueList": [
+        {
+            "name": "Staff"
+        },
+        {
+            "name": "Contractor"
+        },
+        {
+            "name": "Machines or other assets"
+        },
+        {
+            "name": "Scrap Sell"
+        },
+        {
+            "name": "Damage"
+        },
+        {
+            "name": "Other Project"
+        },
+        {
+            "name": "Same project-Other Stores"
+        },
+        {
+            "name": "Theft"
+        }
+    ]
+}

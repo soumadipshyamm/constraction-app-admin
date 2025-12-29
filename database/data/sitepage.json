@@ -1,0 +1,25 @@
+{
+    "sitepage": [
+        {
+            "name": "Home"
+        },
+        {
+            "name": "About"
+        },
+        {
+            "name": "Product"
+        },
+        {
+            "name": "Pricing"
+        },
+        {
+            "name": "Solutions"
+        },
+        {
+            "name": "Blog"
+        },
+        {
+            "name": "Contact Us"
+        }
+    ]
+}

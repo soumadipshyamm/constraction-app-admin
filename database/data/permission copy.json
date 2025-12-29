@@ -1,0 +1,28 @@
+{
+    "adminMenu":[
+        {
+            "name" : "Dashboard"
+        },
+        {
+            "name" : "User Managment"
+        },
+        {
+            "name" : "Role"
+        },
+        {
+            "name" : "Permission"
+        },
+        {
+            "name" : "Master"
+        },
+        {
+            "name" : "subscriptions"
+        },
+        {
+            "name" : "Report"
+        },
+        {
+            "name" : "Settings"
+        }
+     ]
+}
