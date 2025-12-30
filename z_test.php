@@ -1,3 +1,16 @@
+\
+
+
+
+
+
+
+
+https://staging.koncite.com/phpmyadmin/index.php?route=/&route=%2F
+kncitestgadmin
+konc1t2@#2025!!
+
+
 logfile namer
 
 subscription,
